@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify- Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <!-- (i) sidebar -->
+      <div class="sidebar">
+        <div class="home-search">
+          <ul>
+            <li class="home">
+              <a href="#">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="search">
+              <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="library">
+          <div class="your-library">
+            <div class="lib">
+              <img src="./img/library_icon.png" alt="" />
+              <a href="#">Your Library</a>
+            </div>
+            <div class="icons">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="podcast-playlist">
+            <section class="box">
+              <p class="box-p1">Create your first playlist</p>
+              <p class="box-p2">It's easy, we'll help you</p>
+              <button class="badge">Create playlist</button>
+            </section>
+            <section class="box">
+              <p class="box-p1">Let's find some podcasts to follow</p>
+              <p class="box-p2">We'll keep you update on new episodes</p>
+              <button class="badge">Browse podcasts</button>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- (2) main-content -->
+      <div class="main-content">
+        <div class="header">
+          <div class="sticky-nav">
+            <div class="sticky-nav-icons">
+              <i class="fa-solid fa-angle-left dark-badge-circle"></i>
+              <i class="fa-solid fa-angle-right dark-badge-circle hide"></i>
+            </div>
+            <div class="sticky-nav-options">
+              <button class="badge nav-item hide">Explore Premium</button>
+              <button class="badge nav-item dark-badge">
+                <i
+                  class="fa-regular fa-circle-down"
+                  style="margin-right: 5px"
+                ></i
+                >Install App
+              </button>
+
+              <button class="badge nav-item dark-badge-circle">
+                <i class="fa-regular fa-bell" style="margin-right: 5px"></i>
+              </button>
+              <button class="badge nav-item dark-badge-circle">
+                <i class="fa-regular fa-user" style="margin-right: 5px"></i>
+              </button>
+            </div>
+          </div>
+          <div class="header-menu">
+            <button class="badge nav-item">All</button>
+            <button class="badge nav-item light-dark-badge">Music</button>
+            <button class="badge nav-item light-dark-badge">Podcasts</button>
+          </div>
+        </div>
+
+        <div class="cards-container">
+          <img src="./img/MataKeBhajan.jpg" class="card-img" />
+          <p class="card-title">Mata ke Bhajan</p>
+          <p class="card-info">Your daily updates of the most played...</p>
+        </div>
+
+        <div class="main-footer">
+          <div class="line"></div>
+          <div class="footer-cpy">
+            <div class="about">
+              <p>Legal</p>
+              <p>Safety and Privacy Center</p>
+              <p>Prvacy Policy</p>
+              <p>Cookies</p>
+              <p>About Ads</p>
+              <p>Accessibility</p>
+            </div>
+            <div class="cpy">
+              <p>&copy;Spotify AB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- (3) music-player -->
+      <div class="footer">
+        <div class="album"></div>
+
+        <div class="player">
+          <div class="player-controls">
+            <i class="fa-solid fa-shuffle player-control-icon"></i>
+            <i class="fa-solid fa-backward-step player-control-icon"></i>
+            <div id="play-pause">
+              <i class="fa-solid fa-circle-play" id="ctrlIcon"></i>
+            </div>
+            <i class="fa-solid fa-forward-step player-control-icon"></i>
+            <img src="./img/loop.png" class="player-control-icon" />
+          </div>
+
+          <div class="playback-bar">
+            <span class="curr-time">00:00</span>
+            <input
+              type="range"
+              value="0"
+              min="0"
+              max="100"
+              class="progress-bar"
+              step="1"
+              id="progress"
+            />
+            <span class="tot-time">03:33</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="control-icons">
+            <i class="fa-regular fa-square-caret-right"></i>
+            <!-- <i class="fa-solid fa-bars"></i> -->
+            <img src="./img/control_icon2.png" />
+            <img src="./img/control_icon3.png" />
+            <img src="./img/control_icon4.png" />
+          </div>
+          <div class="music-volume">
+            <i class="fa-solid fa-volume-off"></i>
+            <input
+              type="range"
+              value="0"
+              min="0"
+              max="100"
+              class="progress-bar"
+              step="1"
+            />
+          </div>
+          <div class="control-icons">
+            <!-- <i class="fa-solid fa-volume-xmark"></i>
+            <i class="fa-solid fa-volume-low"></i>
+            <i class="fa-solid fa-volume-high"></i> -->
+            <img src="./img/control_icon5.png" alt="" />
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
